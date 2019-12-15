@@ -1,0 +1,82 @@
+<div class="row justify-content-center">
+	<div class="col-6">
+		<div class="input-group mb-3">
+			<input type="text" class="form-control text-search" placeholder="Search">
+			<div class="input-group-append">
+				<button class="btn btn-primary btn-search" type="button">Search</button>
+			</div>
+		</div>
+		<button class="btn btn-secondary btn-add" type="button">Add</button>
+		<div class="results">
+
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-add" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Add Metadata</h5>
+				<button type="button" class="close" data-dismiss="modal">
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form-add" novalidate>
+					<div class="alert alert-danger form-error d-none" role="alert">
+						
+					</div>
+					<div class="form-group">
+						<label>Title</label>
+						<input required name="title" class="form-control form-control-add" placeholder="Enter Title">
+					</div>
+					<div class="form-group">
+						<label>Version</label>
+						<input required name="version" class="form-control form-control-add" placeholder="Enter Version (1.2.3)">
+					</div>
+					<label>Maintainers</label>
+					<div class="maintainers">
+						<div class="maintainer-group form-row">
+							<div class="form-group">
+								<label>Name</label>
+								<input required name="name" class="form-control form-control-maintainer-add" placeholder="Enter Name">
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input required type="email" name="email" class="form-control form-control-maintainer-add " placeholder="Enter Email">
+							</div>
+						</div>
+					</div>
+					<button class="btn btn-secondary btn-add-maintainer" type="button">Add Maintainer</button>
+					<div class="form-group">
+						<label>Company</label>
+						<input required name="company" class="form-control form-control-add" placeholder="Compnay Name">
+					</div>
+					<div class="form-group">
+						<label>Website</label>
+						<input required name="website" type="url" class="form-control form-control-add" placeholder="Enter Website">
+					</div>
+					<div class="form-group">
+						<label>Source</label>
+						<input required name="source" type="url" class="form-control form-control-add" placeholder="Enter Source">
+					</div>
+					<div class="form-group">
+						<label>License</label>
+						<input required name="license" class="form-control form-control-add" placeholder="Enter License">
+					</div>
+					<div class="form-group">
+						<label>Description</label>
+						<textarea required name="description" class="form-control form-control-add" rows="3"></textarea>
+					</div>
+					<button class="btn btn-primary" type="submit">Submit</button>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+ <script type=text/javascript src="{{url_for('static', filename='scripts/main.js') }}"></script>

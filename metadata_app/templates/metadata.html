@@ -1,0 +1,19 @@
+<div class="row justify-content-center">
+	<div class="col-6">
+		<h1>{{metadata.title}}</h1>
+		<h3>Version: {{metadata.version}}</h3>
+		<h3>Maintainers:</h3>
+		<ul>
+		{% for maintainer in metadata.maintainers %}
+			<li>
+				{{ maintainer.name }}: {{ maintainer.email }}
+			</li>
+		{% endfor %}
+		</ul>
+		<h3>Company: {{metadata.company}}</h3>
+		<h3>Website: <a href="{{metadata.website}}">{{metadata.website}}</a></h3>
+		<h3>Source: <a href="{{metadata.source}}">{{metadata.source}}</a></h3>
+		<h3>License: {{metadata.license}}</h3>
+		<h3>Description: {{metadata.description}}</h3>
+	</div>
+</div>
